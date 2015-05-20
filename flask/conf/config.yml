@@ -1,0 +1,5 @@
+#Config file for flask app .
+customer_log:
+  path: C:/jp-work/projects/customer/flask/logs/customer_api.log
+  level: debug
+

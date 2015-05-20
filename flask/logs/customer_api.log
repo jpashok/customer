@@ -1,0 +1,250 @@
+2015-05-15 10:58:05,986 app.py login DEBUG app : Username: None
+2015-05-15 11:01:38,869 app.py login DEBUG app : Username: None
+2015-05-15 11:01:39,891 app.py login DEBUG app : Username: None
+2015-05-15 11:05:18,331 app.py login DEBUG app : Username: None
+2015-05-15 11:05:19,351 app.py login DEBUG app : Username: jp
+2015-05-15 11:17:42,671 app.py login DEBUG app : Username: None
+2015-05-15 11:17:43,719 app.py login DEBUG app : Username: jp
+2015-05-15 11:20:43,063 app.py login DEBUG app : Username: None
+2015-05-15 11:20:44,079 app.py login DEBUG app : Username: jp
+2015-05-15 11:22:18,625 app.py login DEBUG app : Username: None
+2015-05-15 11:22:19,644 app.py login DEBUG app : Username: jp
+2015-05-15 11:22:19,645 app.py login DEBUG app : Before get user detail
+2015-05-15 11:23:10,423 app.py login DEBUG app : Username: None
+2015-05-15 11:23:11,443 app.py login DEBUG app : Username: jp
+2015-05-15 11:23:11,444 app.py login DEBUG app : Before get user detail
+2015-05-15 11:23:11,565 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 27, in get_user_details
+    raise ("Error %d: %s" % (e.args[0], e.args[1]))
+IndexError: tuple index out of range
+
+2015-05-15 11:24:15,088 app.py login DEBUG app : Username: None
+2015-05-15 11:24:16,108 app.py login DEBUG app : Username: jp
+2015-05-15 11:24:16,109 app.py login DEBUG app : Before get user detail
+2015-05-15 11:24:16,239 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 27, in get_user_details
+    raise ("Error %d: %s" % (e.args[0]))
+TypeError: %d format: a number is required, not str
+
+2015-05-15 11:26:01,476 app.py login DEBUG app : Username: None
+2015-05-15 11:26:02,513 app.py login DEBUG app : Username: jp
+2015-05-15 11:26:02,513 app.py login DEBUG app : Before get user detail
+2015-05-15 11:26:02,644 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 27, in get_user_details
+    raise ("Exception in get_user_details: %s" % (e.args[0]))
+TypeError: exceptions must be old-style classes or derived from BaseException, not str
+
+2015-05-15 11:28:58,346 app.py login DEBUG app : Username: None
+2015-05-15 11:28:59,374 app.py login DEBUG app : Username: jp
+2015-05-15 11:28:59,375 app.py login DEBUG app : Before get user detail
+2015-05-15 11:28:59,505 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 28, in get_user_details
+    logger.cusomer_logger().fatal("caught exception  %s" % ( tb))
+AttributeError: 'module' object has no attribute 'cusomer_logger'
+
+2015-05-15 11:29:22,834 app.py login DEBUG app : Username: None
+2015-05-15 11:29:23,859 app.py login DEBUG app : Username: jp
+2015-05-15 11:29:23,861 app.py login DEBUG app : Before get user detail
+2015-05-15 11:29:23,950 PUMySQLDBOps.py get_user_details CRITICAL PUMySQLDBOps : caught exception  Traceback (most recent call last):
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 22, in get_user_details
+    self.db.execute(query,username)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1986, in execute
+    return connection.execute(statement, *multiparams, **params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 906, in execute
+    return self._execute_text(object, multiparams, params)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1054, in _execute_text
+    statement, parameters
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1146, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1342, in _handle_dbapi_exception
+    util.reraise(*exc_info)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\base.py", line 1139, in _execute_context
+    context)
+  File "C:\Python27\lib\site-packages\sqlalchemy\engine\default.py", line 442, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\Python27\lib\site-packages\MySQLdb\cursors.py", line 184, in execute
+    query = query % db.literal(args)
+TypeError: not all arguments converted during string formatting
+
+2015-05-15 11:29:23,967 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 29, in get_user_details
+    raise ("Exception in get_user_details" )
+TypeError: exceptions must be old-style classes or derived from BaseException, not str
+
+2015-05-15 11:31:43,739 app.py login DEBUG app : Username: None
+2015-05-15 11:31:44,759 app.py login DEBUG app : Username: jp
+2015-05-15 11:31:44,760 app.py login DEBUG app : Before get user detail
+2015-05-15 11:31:44,762 PUMySQLDBOps.py get_user_details CRITICAL PUMySQLDBOps : caught exception  Traceback (most recent call last):
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 21, in get_user_details
+    query = ("SELECT username FROM user_det WHERE username=%s" [username])
+TypeError: string indices must be integers, not str
+
+2015-05-15 11:31:44,782 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 29, in get_user_details
+    raise ("Exception in get_user_details" )
+TypeError: exceptions must be old-style classes or derived from BaseException, not str
+
+2015-05-15 11:32:18,696 app.py login DEBUG app : Username: None
+2015-05-15 11:32:19,717 app.py login DEBUG app : Username: jp
+2015-05-15 11:32:19,717 app.py login DEBUG app : Before get user detail
+2015-05-15 11:32:19,719 PUMySQLDBOps.py get_user_details CRITICAL PUMySQLDBOps : caught exception  Traceback (most recent call last):
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 21, in get_user_details
+    query = ("SELECT username FROM user_det WHERE username='%s'" [username])
+TypeError: string indices must be integers, not str
+
+2015-05-15 11:32:19,736 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 29, in get_user_details
+    raise ("Exception in get_user_details" )
+TypeError: exceptions must be old-style classes or derived from BaseException, not str
+
+2015-05-15 11:45:22,848 app.py login DEBUG app : Username: None
+2015-05-15 11:45:23,861 app.py login DEBUG app : Username: jp
+2015-05-15 11:45:23,862 app.py login DEBUG app : Before get user detail
+2015-05-15 11:45:24,112 PUMySQLDBOps.py get_user_details DEBUG PUMySQLDBOps : Username in get_user_details: jp
+2015-05-15 11:45:24,115 PUMySQLDBOps.py get_user_details CRITICAL PUMySQLDBOps : caught exception  Traceback (most recent call last):
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 29, in get_user_details
+    logger.customer_logger().debug('rowcount: ' + self.db.rowcount)
+AttributeError: 'TLEngine' object has no attribute 'rowcount'
+
+2015-05-15 11:45:24,134 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 34, in get_user_details
+    raise ("Exception in get_user_details" )
+TypeError: exceptions must be old-style classes or derived from BaseException, not str
+
+2015-05-15 12:00:15,996 app.py login DEBUG app : Username: None
+2015-05-15 12:00:17,009 app.py login DEBUG app : Username: jp
+2015-05-15 12:00:17,010 app.py login DEBUG app : Before get user detail
+2015-05-15 12:00:17,028 PUMySQLDBOps.py get_user_details CRITICAL PUMySQLDBOps : caught exception  Traceback (most recent call last):
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 28, in get_user_details
+    s = self.user_det.select(self.user_det.c.name == bindparam('username'))
+  File "C:\Python27\lib\site-packages\sqlalchemy\util\_collections.py", line 209, in __getattr__
+    raise AttributeError(key)
+AttributeError: name
+
+2015-05-15 12:00:17,046 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login?username=jp&password=jp123: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    rowcount = mysqldbops.get_user_details(username)
+  File "C:\jp-work\projects\customer\flask\webapp\PUMySQLDBOps.py", line 36, in get_user_details
+    raise ("Exception in get_user_details" )
+TypeError: exceptions must be old-style classes or derived from BaseException, not str
+
+2015-05-15 12:13:50,190 app.py login DEBUG app : Username: None
+2015-05-15 12:13:51,217 app.py login DEBUG app : Username: jp
+2015-05-15 12:13:51,217 app.py login DEBUG app : Before get user detail
+2015-05-15 12:13:51,263 app.py login DEBUG app : rowcount 1
+2015-05-15 12:22:35,114 app.py login DEBUG app : Username: None
+2015-05-15 12:22:36,142 app.py login DEBUG app : Username: jp
+2015-05-15 12:22:36,144 app.py login DEBUG app : Before get user detail
+2015-05-15 12:22:36,184 app.py login DEBUG app : rowcount 1
+2015-05-19 11:58:54,321 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 46, in login
+    if custBizComp.verifyUserName(username) :
+  File "C:/jp-work/projects/customer/flask/webapp\PUCustomerBizComp.py", line 11, in verifyUserName
+    rowcount = mysqldbops.verify_user_name(username)
+  File "C:/jp-work/projects/customer/flask/webapp\PUCustMySQLDBOps.py", line 19, in verify_user_name
+    self.cursor.execute(query,username)
+  File "C:\Users\ashokpriya\Envs\pucust_venv\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    query = query % args
+TypeError: not all arguments converted during string formatting
+
+2015-05-19 12:06:04,446 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 47, in login
+    if custBizComp.verifyUserPwd(username,password) :
+  File "C:/jp-work/projects/customer/flask/webapp\PUCustomerBizComp.py", line 16, in verifyUserPwd
+    rowcount = mysqldbops.verify_user_passwd(username,password)
+AttributeError: 'PUCustMySQLDBOps' object has no attribute 'verify_user_passwd'
+
+2015-05-19 12:09:12,665 PUCustMySQLDBOps.py verify_user_pwd ERROR PUCustMySQLDBOps : Error : Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp\PUCustMySQLDBOps.py", line 30, in verify_user_pwd
+    self.cursor.execute(query,(password,username))
+  File "C:\Users\ashokpriya\Envs\pucust_venv\lib\site-packages\MySQLdb\cursors.py", line 220, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\ashokpriya\Envs\pucust_venv\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+OperationalError: (1054, "Unknown column 'password' in 'field list'")
+
+2015-05-20 09:41:48,630 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    username = params['username']
+KeyError: 'username'
+
+2015-05-20 09:42:13,233 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    username = params['username']
+KeyError: 'username'
+
+2015-05-20 09:42:58,987 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    username = params['username']
+KeyError: 'username'
+
+2015-05-20 09:44:12,104 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    username = params['username']
+KeyError: 'username'
+
+2015-05-20 09:47:43,430 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    username = params['username']
+KeyError: 'username'
+
+2015-05-20 09:50:51,621 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    username = params['username']
+KeyError: 'username'
+
+2015-05-20 09:54:06,775 app.py login CRITICAL app : caught exception in http://localhost:5000/customer/login: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 49, in login
+    if resp.status_code == 400 :
+AttributeError: 'NoneType' object has no attribute 'status_code'
+
+2015-05-20 09:56:39,739 app.py signup CRITICAL app : caught exception in http://localhost:5000/customer/signup: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 84, in signup
+    user_det = json.loads(params)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+
+2015-05-20 09:57:51,742 app.py signup CRITICAL app : caught exception in http://localhost:5000/customer/signup: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 84, in signup
+    user_det = json.loads(params)
+  File "C:\Python27\Lib\json\__init__.py", line 338, in loads
+    return _default_decoder.decode(s)
+  File "C:\Python27\Lib\json\decoder.py", line 366, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+TypeError: expected string or buffer
+
+2015-05-20 10:01:06,698 app.py signup CRITICAL app : caught exception in http://localhost:5000/customer/signup: Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp/app.py", line 85, in signup
+    custBizComp.signup(params)
+  File "C:/jp-work/projects/customer/flask/webapp\PUCustomerBizComp.py", line 21, in signup
+    return mysqldbops.insert_user_det(user_det)
+AttributeError: 'PUCustMySQLDBOps' object has no attribute 'insert_user_det'
+
+2015-05-20 10:02:07,092 PUCustMySQLDBOps.py insert_user_det ERROR PUCustMySQLDBOps : Error : Traceback (most recent call last):
+  File "C:/jp-work/projects/customer/flask/webapp\PUCustMySQLDBOps.py", line 49, in insert_user_det
+    self.cursor.execute("""INSERT INTO user_det VALUES (%s,%s,%s,%s,%s)""", (user_det['username'],user_det['password'],user_det['firstname'],user_det['lastname'],user_det['email']))
+  File "C:\Users\ashokpriya\Envs\pucust_venv\lib\site-packages\MySQLdb\cursors.py", line 220, in execute
+    self.errorhandler(self, exc, value)
+  File "C:\Users\ashokpriya\Envs\pucust_venv\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorvalue
+OperationalError: (1136, "Column count doesn't match value count at row 1")
+

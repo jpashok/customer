@@ -1,0 +1,8 @@
+ipython==3.0.0
+pyelasticsearch==1.2
+Flask==0.10.1
+PyYAML==3.10
+flask-cors==2.0.0
+functools32==3.2.3-1
+requests==2.6.2
+Flask-SQLAlchemy=2.0
